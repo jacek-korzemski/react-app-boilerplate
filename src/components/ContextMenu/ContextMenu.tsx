@@ -46,7 +46,9 @@ const ContextMenu = ({ children }: { children: ReactNode }) => {
   };
 
   useEffect(() => {
-    window.addEventListener("click", closeContextMenu);
+    setTimeout(() => {
+      window.addEventListener("click", closeContextMenu);
+    });
     return () => {
       window.removeEventListener("click", closeContextMenu);
     };
